@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding:0;
+    scroll-behavior: smooth;
+    
+}
+
+$color1:rgb(173,209,237);
+$color2:rgb(32,72,89);
+$color3:black;
+$color4:#DEDEDE;
+$color5:rgb(255,102,25);
+$color6:rgb(255,5,5);
+
+//display settings
+
+.wrapper {
+    font-family: roboto;
+    height: 100%;
+    display: grid;
+    grid-template: minmax(50px, auto) 1fr minmax(20px,auto) / 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
+// header settings
+
+.header{
+    background-color:$color1;
+    border-bottom:3px solid black;
+    width:100%;
+    grid-area: header;
+    &__content {
+        text-align: center;
+        .logo {
+
+            &__image{
+
+                max-width:150px;
+                width:100%;
+                height:auto;
+            }
+        }
+    }
+}
+
+// main settings
+
+.main {
+    grid-area: main;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__content {
+        flex:1;
+        width: 100%;
+        .about {
+            background-color: greenyellow;
+            #map {
+                height: 87vh;  
+                width: 100%;  
+                background-color: $color4;
+            }
+        }
+    }
+
+    .nav_bar {
+
+        z-index: 1;
+        top:0;
+        left:0;
+        position:sticky;
+        width:100%;
+        background-color: $color4;
+
+
+        &__elements{
+            display:flex;
+            top:0;
+            left:0;
+            position:sticky;
+            padding-top:7px;
+            list-style-type:none;
+        }
+
+        &__link {
+            font-weight: bold;
+            color:$color3;
+            font-size: 25px;
+            text-decoration: none;
+        }
+    }
+
+    .right_bar{
+        text-align: center;
+        width:100%;
+        background-color:$color4;
+    }
+}
+
+.footer{
+    grid-area:footer;
+    background-color: $color1;
+    width:100%;
+    text-align: center;
+
+}
+
+//media 
+
+@media (min-width:768px) {
+    .wrapper {
+        min-height: 100vh;
+    }
+    .main {
+        width:100%;
+        display: grid;
+        grid-template: 1fr/  minmax(auto,120px) 1fr minmax(100px,auto);
+    
+        .nav_bar {
+            grid-column:1;
+            &__elements {
+                display:flex;
+                flex-direction: column;
+                padding-left:10px;
+            }
+        }
+        .main__content {
+            grid-column: 2;
+        }
+        .right-bar {
+            grid-column: 3;
+        }
+        .inline_calendar{
+            margin-top:150px;
+        }
+        .search_form {
+            margin-top:140px;
+        }
+    }
+}
