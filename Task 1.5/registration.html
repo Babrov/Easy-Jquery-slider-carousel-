@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contact_style.css">
+    <link rel="stylesheet" href="css/registration_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
@@ -37,23 +37,31 @@
                 </ul>
             </nav>
             <div class="main__content">
-                <div class="contact">
-                    <div class="contact_form">
+                <div class="registration">
+                    <h1>Registration Form</h1>
+                    <div class="registration_form">
                         <form name="form">
-                            <div class="input_form">
-                                <label class="label">Your name:</label>
+                            <div class="text_form">
+                                <label for="name" class="label">Your name:</label>
                                 <input type="text" class="name" placeholder="example" required>
                             </div>
-                            <div class="input_form">
+                            <div class="text_form">
                                 <label class="label">Your email:</label>
                                 <input type="email" class="email" placeholder="example@gmail.com" required>
                             </div>
                             <div class="text_form">
-                                <label for="text_area" class="label">Your order:</label>
-                                <textarea class="text_area" placeholder="Enter your order here..."></textarea>
+                                <label for="password" class="label">Password:</label>
+                                <input type="password" class="password"></input>
+                            </div>
+                            <div class="text_form">
+                                <label for="password" class="label">Confirm password:</label>
+                                <input type="password" class="password_repeat"></input>
                             </div>
                             <div class="button_send">
                                 <input type="submit" value="Send" name="button" class="button"></button>
+                            </div>
+                            <div class="sign_in">
+                                <p>Already have account? <a href="#">Sign in</a></p>
                             </div>
                         </form>
                     </div>
@@ -81,5 +89,6 @@
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="js/task_2_2.js"></script>
+    <script src="js/task_3_1.js"></script>
 </body>
 </html>
